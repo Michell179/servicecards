@@ -19,7 +19,7 @@ public class CashCardJsonTest {
     void cashCardSerializationTest() throws Exception {
         CashCard cashCard = new CashCard(99L, 123.45);
 
-        assertThat(json.write(cashCard)).isStrictlyEqualToJson("expected.json");
+        assertThat(json.write(cashCard)).isStrictlyEqualToJson("com/michell/cashcard/expected.json");
         assertThat(json.write(cashCard)).hasJsonPathNumberValue("@.id");
         assertThat(json.write(cashCard)).extractingJsonPathNumberValue("@.id")
                 .isEqualTo(99);
