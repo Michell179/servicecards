@@ -10,8 +10,7 @@ Project based in Java 17 and SpringBoot.
 ``` http request
 /cashcards
 ```   
-```json 
-//        Amount of Card 
+```json
 {
 	"amount": 1
 }
