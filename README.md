@@ -1,10 +1,16 @@
-**SERVICE CARDS API**
+# **SERVICE CARDS API** ![Status badge](https://img.shields.io/badge/status-in%20progress-yellow) 
+
+Project based in Java 17 and SpringBoot, CashCards is a service for manage money in our family.  
+![Status badge](https://img.shields.io/badge/Developed_By-Michell_Arias-green)
 
 
-Project based in Java 17 and SpringBoot.
+## 🛠 Deployment
+1. Use Gradle   
+`/gradlew bootRun`
 
-- **Endpoints**  
-  
+
+
+### **Endpoints**
 
  ``POST:`` Expected **Json Body** and **create new sub-resource.**
 ``` http request
@@ -13,6 +19,16 @@ Project based in Java 17 and SpringBoot.
 ```json
 {
 	"amount": 1
+}
+```   
+
+``PUT: `` Use for **update** a **Resource.**
+``` http request
+/cashcards/{id}
+``` 
+```json
+{
+	"amount": 2 
 }
 ```
    
@@ -23,7 +39,7 @@ Project based in Java 17 and SpringBoot.
 
 
 ``GET:`` Get **list** of resources in order for **id**, **amount** or **page.**
-```http request
+``` http request
 /cashcards?page=0&size=20&sort=id,asc
 ```
 
